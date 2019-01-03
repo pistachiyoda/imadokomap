@@ -14,42 +14,36 @@
     <script defer src="/__/firebase/5.7.2/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
   </head>
   <body>
     <!---->
-    <div id="wrapper">
-      <div class="beforeLogin">
-        <h1>Welcome to<br>IMADOKO MAP!!</h1>
-        <button class="" id="signIn">Sign in !!</button>
-        
-        <button class="" id="signOut">Sign out !!</button>
+    <div class="wrapper">
+      <div class="beforeLogin" hidden>
+        <h1 class="beforeLoginTitle">Welcome to<br><i class="fas fa-map-marker-alt"></i> IMADOKO MAP!!</h1>
+        <p>IMADOKO MAP(イマドコ マップ)は現在地をタイムライン上で共有できるサービスです。<br>
+          お友達との待ち合わせなどにご活用ください！
+        </p>
+        <button id="signIn" class="button_reset btn">SIGN IN !!</button>
+      </div>
+      <div class="afterLogin" hidden>
+        <div class="sideBarWapper">
+          <h1 class="afterLoginTitle">IMADOKO MAP</h1>
+          <h2>USER</h2>
+          <span class="userName"></span>
+          <br>
+          <span class="userPhoto"></span>
+          <br>
+          <button id="signOut" class="button_reset btn">SIGN OUT</button>
+        </div>
+        <div class="mainWapper">
+          <button id="sendLocation" class="button_reset btn"><i class="fas fa-map-marker-alt"></i> 今ココ！！</button>
+          <div id="messageList"></div>
+        </div>
       </div>
     </div>
-
-    <!--
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-    -->
     <script defer src="/js/jquery-3.3.1.min.js"></script>
     <script defer src="/js/bundle.js"></script>
   </body>

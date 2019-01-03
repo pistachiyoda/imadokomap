@@ -1,3 +1,6 @@
 export var vm = {
-    loggedIn: false
+    loggedIn: false,
+    user: null,
+    // メッセージ一覧
+    messages: [] 
 };
