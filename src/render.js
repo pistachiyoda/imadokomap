@@ -26,7 +26,7 @@ function renderUserInfo(){
 
 function renderMessages() {
     const messages = vm.messages;
-    const apiKey = 'AIzaSyB9pk2FwYXIw6wEAo75LDPnRnu9B1yQZy4';
+    const apiKey = 'YOUR API KEY';
     const baseURL = 'https://maps.googleapis.com/maps/api/staticmap';
 
     $('#messageList').html('');
